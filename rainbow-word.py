@@ -18,7 +18,8 @@ totalWords = []
 newWordList = []
 
 # Red, Orange, Yellow, Green, Blue, Violet
-colors = [RGBColor(255, 0, 0), RGBColor(255, 117, 0), RGBColor(255, 249, 0), RGBColor(76, 223, 0), RGBColor(26, 103, 236), RGBColor(151, 23, 238)]
+colors = [RGBColor(255, 0, 0), RGBColor(255, 117, 0), RGBColor(255, 249, 0), RGBColor(76, 223, 0),
+          RGBColor(26, 103, 236), RGBColor(151, 23, 238)]
 
 # Loop through the existing paragraphs, delete the old ones and replace them with the colorful ones.
 for p in allTxt:
@@ -49,12 +50,9 @@ def add_words(begin, end, color):
     newWordList.clear()
 
 
-add_words(0, part, colors[0])
-add_words(part, part * 2, colors[1])
-add_words(part * 2, part * 3, colors[2])
-add_words(part * 3, part * 4, colors[3])
-add_words(part * 4, part * 5, colors[4])
-add_words(part * 5, part * 6, colors[5])
+for z in range(0, len(colors)):
+    add_words(z * part, (z + 1) * part, colors[z])
+
 
 # Create a new file and save it
 doc.save('rainbow.docx')
