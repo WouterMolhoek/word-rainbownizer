@@ -1,6 +1,6 @@
 # Word Rainbownizer
 
-A python script that changes the color of the text to the color of the rainbow
+A python script that changes the color of the text from a Microsoft Docx file to the color of the rainbow
 
 ## Usage
 
