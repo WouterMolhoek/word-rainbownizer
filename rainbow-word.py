@@ -1,7 +1,9 @@
 from docx import Document
 from docx.shared import RGBColor
 
-doc = Document('test-file.docx')
+file_name = input('Filename: ')
+
+doc = Document(file_name)
 
 # All the paragraphs stored in an array
 allTxt = doc.paragraphs
@@ -53,6 +55,6 @@ def add_words(begin, end, color):
 for z in range(0, len(colors)):
     add_words(z * part, (z + 1) * part, colors[z])
 
-
 # Create a new file and save it
-doc.save('rainbow.docx')
+doc.save('rainbow-' + file_name)
+
