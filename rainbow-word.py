@@ -36,12 +36,14 @@ part = int(len(totalWords) / 6)
 
 def add_words(begin, end, color):
     for i in range(begin, end):
-        newWordList.append(totalWords[i])
+        # Add a space after a word
+        new_word = totalWords[i] + ' '
+        newWordList.append(new_word)
 
     run = doc.add_paragraph().add_run(newWordList)
     font = run.font
 
-    # Set font color to red
+    # Set font color
     font.color.rgb = color
     # Clear the previous array
     newWordList.clear()
