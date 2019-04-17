@@ -34,7 +34,8 @@ for p in allTxt:
     for word in words:
         totalWords.append(word)
 
-part = int(len(totalWords) / 6)
+# Divide the total amount of words by the length of the colors array
+part = int(len(totalWords) / len(colors))
 
 
 def add_words(begin, end, color):
